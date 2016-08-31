@@ -52,6 +52,11 @@ public class Petshop {
         
     }
     
+    public void agendaTosa(Integer indice) throws Exception
+    {
+        agendaTosa(animais.get(indice));
+    }
+    
     
     
 }

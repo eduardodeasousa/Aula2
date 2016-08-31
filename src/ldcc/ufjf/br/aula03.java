@@ -15,13 +15,31 @@ public class aula03 {
             System.out.println("Deseja cadastrar outro animal? (S/N)");
         }
         while (entrada.nextLine().equalsIgnoreCase("s")  );
-        System.out.println(pet.getAnimais());
+        System.out.println("Qual o animal tem tosa agendada: ");
+        
+        for(int i=0; i<pet.getAnimais().size(); i++)
+        {
+            System.out.println(i+" : "+pet.getAnimais().get(i));
+        }
+        try{
+            pet.agendaTosa(pet.getAnimais().get(entrada.nextInt()));
+        }
+        catch (Exception ex)
+        {
+            System.err.println(ex.getLocalizedMessage());
+        }
+        
         Animal a0 = pet.getAnimais().get(0);
+        Animal ax = new Animal();
+        ax.setNome("cachorrao");
+        ax.setIdade(11);
+   
         try {  
         pet.agendaTosa(a0);    
+        pet.agendaTosa(ax);
         }
         catch (Exception ex) {
-            System.err.println("Tentativa de agendametno para um animal nao cadastrado! ");
+            System.err.println(ex.getLocalizedMessage());
         }
         
         
