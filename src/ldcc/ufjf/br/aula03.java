@@ -12,7 +12,6 @@ public class aula03 {
         Scanner entrada = new Scanner(System.in);
         do{
             pet.cadastroAnimal();
-            System.out.println("Deseja cadastrar outro animal? (S/N)");
         }
         while (entrada.nextLine().equalsIgnoreCase("s")  );
         System.out.println("Qual o animal tem tosa agendada: ");
